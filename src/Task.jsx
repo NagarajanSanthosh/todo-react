@@ -1,5 +1,4 @@
 import React from "react";
-import Priority from "./Priority";
 const Task = ({ text, description, completed }) => {
     return (
         
