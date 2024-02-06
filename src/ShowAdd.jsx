@@ -17,8 +17,8 @@ const ShowAdd = ({
     hideAdd();
   }
   return (
-    <div className={show === false ? "slide-down max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl bg-white sm:mt-2" : "slide-up max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl bg-white sm:mt-2"}>
-      <div className="md:flex">
+    <div className={show === false ? "slide-down max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl bg-gray-200 sm:mt-2" : "slide-up max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl bg-gray-200 sm:mt-2"}>
+      <div className="md:flex bg-gray-200">
         <div className="pl-8">
           <div className="uppercase tracking-wide md:flex text-sm text-tindogPink font-bold p-2">
             Todo
