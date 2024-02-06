@@ -30,7 +30,7 @@ const TodoItem = ({ task, markCompleted, deleteTask }) => {
                     >
                         <Priority />
                     </label>
-                    <div className="flex items-center">
+                    <div className="flex justify-center items-center">
                         <DeleteButton onClick={() => deleteTask(task.id)} />
                     </div>
                 </div>

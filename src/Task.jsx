@@ -6,7 +6,9 @@ const Task = ({ text, description, completed }) => {
             <p className="ml-6 tracking-wide md:flex text-lg uppercase font-bold">
                 {text}
             </p>
-            <p className="ml-6 font-light text-sm text-black italic">{description}</p>
+            <p className="ml-6 font-light text-sm text-black italic">
+                {description}
+            </p>
         </div>
     );
 };
