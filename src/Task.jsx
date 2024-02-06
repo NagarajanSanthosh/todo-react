@@ -1,7 +1,8 @@
 import React from "react";
-
+import Priority from "./Priority";
 const Task = ({ text, description, completed }) => {
     return (
+        
         <div className={completed ? "line-through text-orange-300 mr-2" : "mr-2"}>
             <p className="ml-6 tracking-wide md:flex text-lg uppercase font-bold">
                 {text}
@@ -9,7 +10,9 @@ const Task = ({ text, description, completed }) => {
             <p className="ml-6 font-light text-sm text-black italic">
                 {description}
             </p>
+            
         </div>
+        
     );
 };
 
