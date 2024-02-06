@@ -65,10 +65,11 @@ const Todo = () => {
                 <div className="row md-flex items-center">
 
                     <button
-                        className="bg-gray-200  text-tindogPink font-bold py-2 px-4 rounded-full inline-flex items-center"
+                        className="mb-2 bg-gray-200  text-tindogPink font-bold py-2 px-4 rounded-full inline-flex items-center"
                         onClick={handleShowTrue}>
                         +
                     </button>
+                    <br />
                     {show && <ShowAdd
                         text={text}
                         handleDescriptionChange={handleDescriptionChange}
