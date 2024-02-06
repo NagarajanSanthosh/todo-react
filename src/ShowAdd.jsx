@@ -24,7 +24,7 @@ const ShowAdd = ({
                 value={text}
                 onChange={handleInputChange}
                 placeholder="Enter task"
-                className="w-full bg-gray-100 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="w-full rounded-full bg-gray-100 border border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-400"
               />
             </div>
             <div className="block mt-1 w-full">
@@ -33,7 +33,7 @@ const ShowAdd = ({
                 value={description}
                 onChange={handleDescriptionChange}
                 placeholder="Enter Description"
-                className="w-full bg-gray-100 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="w-full bg-gray-100 border border-gray-200 rounded-full py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-400"
               />
             </div>
             <div className="flex items-center justify-between">
