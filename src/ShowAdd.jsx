@@ -1,55 +1,62 @@
 import React from "react";
-import './index.css';
 
 const ShowAdd = ({
+  text,
   handleDescriptionChange,
   handleInputChange,
-  text,
   description,
   addTask,
   hideAdd,
-  handleShowFalse,
   show,
-
+  handleShowFalse,
 }) => {
-  const handleAddTask = () => {
-    addTask();
-    hideAdd();
-  }
   return (
-    <div className={show === false ? "slide-down max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl bg-gray-200 sm:mt-2" : "slide-up max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl bg-gray-200 sm:mt-2"}>
-      <div className="md:flex bg-gray-200 max-w-md mx-auto rounded-xl shadow-lg overflow-hidden md:max-w-2xl mb-2">
-        <div className="pl-8">
-          <div className="uppercase tracking-wide md:flex text-sm text-tindogPink font-bold p-2">
-            Todo
-          </div>
-          <div className="row">
-            <input className="m-2 text-slate-500 p-2"
-              type="text"
-              value={text}
-              onChange={handleInputChange}
-              placeholder="task"
-            />
-            <input className=" text-slate-500 p-2 m-2"
-              type="text"
-              value={description}
-              onChange={handleDescriptionChange}
-              placeholder="description"
-            />
-            <div className="mt-2">
-              <button className=" item-start justify-start  bg-tindogPink hover:bg-tindogPink text-gray-200 py-2 px-4 rounded-full m-2 mr-50 md:mr-5 font-semibold"
-                onClick={handleShowFalse}>Cancel
+    <div className="slide-left m-5">
+      <div className="max-w-md mx-auto rounded-xl shadow-lg overflow-hidden md:max-w-2xl mb-2">
+        <div className="bg-gray-200 text-tindogPink md-flex">
+          <div className="p-8">
+            <div className="uppercase tracking-wide text-sm text-todoPink font-semibold">
+              Todo
+            </div>
+            <div className="block mt-1 w-full">
+              <input
+                type="text"
+                value={text}
+                onChange={handleInputChange}
+                placeholder="Enter task"
+                className="w-full bg-gray-100 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              />
+            </div>
+            <div className="block mt-1 w-full">
+              <input
+                type="text"
+                value={description}
+                onChange={handleDescriptionChange}
+                placeholder="Enter Description"
+                className="w-full bg-gray-100 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              />
+            </div>
+            <div className="flex items-center justify-between">
+              <button
+                className="bg-tindogPink hover:bg-tindogPink text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="button"
+                onClick={addTask}
+              >
+                Add
               </button>
-              <button className="justify-end  bg-tindogPink hover:bg-tindogPink text-gray-200 py-2 px-4 rounded-full m-2 font-semibold"
-                onClick={handleAddTask}>Add</button>
+              <button
+                className="font-bold py-2 px-4 rounded"
+                type="button"
+                onClick={hideAdd}
+              >
+                Cancel
+              </button>
             </div>
           </div>
-
-
-
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
 export default ShowAdd;
