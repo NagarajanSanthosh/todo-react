@@ -70,6 +70,17 @@ code {
     opacity: 0;
   }
 }
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+.pulse{
+  animation: pulse 0.5s ease;
+}
 
 .slide-up {
   animation: slideUp 0.5s ease;
