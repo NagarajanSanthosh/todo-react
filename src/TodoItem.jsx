@@ -1,10 +1,10 @@
 import React from "react";
 import "./index.css";
 import "./checkbox.css";
-import Priority from "./Priority";
 import Checkbox from "./Checkbox";
 import Task from "./Task";
 import DeleteButton from "./DeleteButton";
+import "./TodoItem.css"
 
 const TodoItem = ({ task, markCompleted, deleteTask }) => {
     const handleCheckbox = () => {
@@ -24,12 +24,14 @@ const TodoItem = ({ task, markCompleted, deleteTask }) => {
                         description={task.description}
                         completed={task.completed}
                     />
-                    <label
-                        className="relative flex items-center p-3 -mt-5 rounded-full cursor-pointer"
-                        htmlFor="priority"
-                    >
+                    {/* 
+                        <label
+                         className="relative flex items-center p-3 -mt-5 rounded-full cursor-pointer"
+                         htmlFor="priority"
+                         >
                         <Priority />
-                    </label>
+                        </label>
+                    */}
                     <div className="flex items-center">
                         <DeleteButton onClick={() => deleteTask(task.id)} />
                     </div>

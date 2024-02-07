@@ -7,7 +7,7 @@ const Checkbox = ({ id, checked, onChange }) => {
             type="checkbox"
             checked={checked}
             onChange={onChange}
-            className="mr-2 md:flex checkbox"
+            className="mr-2 ml-4 justify-center items-center md:flex checkbox"
         />
     );
 };

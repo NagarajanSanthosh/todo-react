@@ -11,7 +11,7 @@ const ShowAdd = ({
   handleShowFalse,
 }) => {
   return (
-    <div className="slide-left m-5">
+    <div className="slide-up m-5">
       <div className="max-w-md mx-auto rounded-xl shadow-lg overflow-hidden md:max-w-2xl mb-2">
         <div className="bg-gray-200 text-tindogPink md-flex">
           <div className="p-8">
@@ -23,7 +23,7 @@ const ShowAdd = ({
                 type="text"
                 value={text}
                 onChange={handleInputChange}
-                placeholder="Enter task"
+                placeholder="task"
                 className="w-full rounded-full bg-gray-100 border border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-400"
               />
             </div>
@@ -32,7 +32,7 @@ const ShowAdd = ({
                 type="text"
                 value={description}
                 onChange={handleDescriptionChange}
-                placeholder="Enter Description"
+                placeholder="Description"
                 className="w-full bg-gray-100 border border-gray-200 rounded-full py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-400"
               />
             </div>
