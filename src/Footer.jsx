@@ -9,10 +9,10 @@ function Footer() {
           <p className="text-xs">© {new Date().getFullYear()} All rights reserved.</p>
         </div>
         <div className="flex gap-4 mt-2 md:mt-0">
-          <a href="#" className="text-sm hover:text-gray-300">About</a>
-          <a href="#" className="text-sm hover:text-gray-300">Contact</a>
-          <a href="#" className="text-sm hover:text-gray-300">Terms</a>
-          <a href="#" className="text-sm hover:text-gray-300">Privacy</a>
+          <a  className="text-sm hover:text-gray-300">About</a>
+          <a  className="text-sm hover:text-gray-300">Contact</a>
+          <a className="text-sm hover:text-gray-300">Terms</a>
+          <a className="text-sm hover:text-gray-300">Privacy</a>
         </div>
       </div>
     </footer>
