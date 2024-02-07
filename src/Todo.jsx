@@ -3,6 +3,7 @@ import "./index.css";
 import AddButton from "./AddButton";
 import ShowAdd from "./ShowAdd";
 import TodoList from "./TodoList";
+import Footer from "./Footer";
 
 const Todo = () => {
     const [tasks, setTask] = useState([]);
@@ -76,6 +77,9 @@ const Todo = () => {
                             handleShowFalse={handleShowFalse}
                         />
                     )}
+                </div>
+                <div className="row md-flex items-center">
+                <Footer />
                 </div>
             </div>
         </div>

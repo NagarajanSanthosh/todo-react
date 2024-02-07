@@ -1,0 +1,20 @@
+/* Make the body element a grid container */
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Define the height of each row */
+    min-height: 100vh; /* Fill the viewport height */
+  }
+  
+  /* Assign each child element to a grid area */
+  .header {
+    grid-area: header;
+  }
+  
+  main {
+    grid-area: main;
+  }
+  
+  .footer {
+    grid-area: footer;
+  }
+  
