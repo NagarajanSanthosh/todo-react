@@ -7,8 +7,6 @@ const ShowAdd = ({
   description,
   addTask,
   hideAdd,
-  show,
-  handleShowFalse,
 }) => {
   return (
     <div className="slide-up m-5">

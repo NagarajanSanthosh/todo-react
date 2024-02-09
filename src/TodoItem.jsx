@@ -5,7 +5,7 @@ import Checkbox from "./Checkbox";
 import Task from "./Task";
 import DeleteButton from "./DeleteButton";
 import "./TodoItem.css"
-
+import EditButton from "./EditButton";
 const TodoItem = ({ task, markCompleted, deleteTask }) => {
     const handleCheckbox = () => {
         markCompleted(task.id);
@@ -33,6 +33,7 @@ const TodoItem = ({ task, markCompleted, deleteTask }) => {
                         </label>
                     */}
                     <div className="flex items-center">
+                        <EditButton />
                         <DeleteButton onClick={() => deleteTask(task.id)} />
                     </div>
                 </div>
