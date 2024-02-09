@@ -1,8 +1,8 @@
 import React from "react";
 const SearchComponent = ({tasks, handleSearch, searchText}) => {
-    const filteredTasks = tasks.filter(task => {
-        task.text.toLowerCase().includes(searchText.toLowerCase())
-    });
+    // const filteredTasks = tasks.filter(task => {
+    //     task.text.toLowerCase().includes(searchText.toLowerCase())
+    // });
     const handleSearchSubmit = () => {
 
     }
