@@ -12,7 +12,7 @@ const Todo = () => {
     const [text, setText] = useState("");
     const [description, setDescription] = useState("");
     const [show, setShow] = useState(false);
-    const [searchText, setSearchText] = useState("");
+     const [results, setResults] = useState([])
 
     const handleInputChange = (event) => {
         setText(event.target.value);
@@ -49,13 +49,10 @@ const Todo = () => {
     const handleShowTrue = () => {
         setShow(true);
     };
-    
+
     const hideAdd = () => {
         setShow(false);
     };
-    const handleSearch = (e) =>{
-        setSearchText(e.target.value);
-    }
     return (
         <div className="m-5">
             <div>
@@ -63,8 +60,8 @@ const Todo = () => {
                     tasks={tasks}
                     markCompleted={markCompleted}
                     deleteTask={deleteTask}
-                    handleSearch = {handleSearch}
-                    searchText={searchText}
+                    setResults = {setResults}
+                    results = {results}
                 />
                 <div className="row md-flex items-center">
                     <AddButton onClick={handleShowTrue} />
@@ -81,7 +78,7 @@ const Todo = () => {
                     )}
                 </div>
                 <div className="row md-flex items-center">
-                <Footer />
+                    <Footer />
                 </div>
             </div>
         </div>

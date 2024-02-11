@@ -2,14 +2,16 @@ import React from "react";
 import TodoItem from "./TodoItem";
 import Header from "./Header";
 
-const TodoList = ({ tasks, markCompleted, deleteTask, handleSearch, searchText }) => {
+const TodoList = ({ tasks, markCompleted, deleteTask,setResults, results }) => {
     return (
         <div>
             <Header
-             tasks ={tasks}
-             handleSearch = {handleSearch}
-             searchText={searchText} 
+                tasks={tasks}
+                setResults = {setResults}
+                results = {results}
+
             />
+            <br />
             {tasks.map((task) => (
                 <TodoItem
                     key={task.id}
