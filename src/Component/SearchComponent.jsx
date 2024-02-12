@@ -1,32 +1,46 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { FaSearch } from "react-icons/fa";
-export const SearchComponent = ({ tasks, setResults }) => {
+import './SearchComponent.css'
+
+export const SearchComponent = ({ tasks }) => {
     const [input, setInput] = useState('');
+    const [results, setResults] = useState([]);
+
     const filterData = (value) => {
-        const results = tasks.filter((task) => {
+        const filteredResults = tasks.filter((task) => {
             return value && task && task.text && task.text.toLowerCase().includes(value.toLowerCase());
         });
 
-        setResults(results);
-        console.log(results);
+        setResults(filteredResults);
     };
+
     const handleChange = (value) => {
         setInput(value);
         filterData(value);
     }
-    return (
-        <div>
-            <div className='input-wrapper bg-white w-full rounded-lg h-10 shadow-md flex items-center'>
-                <FaSearch className='m-2 text-tindogPink' id='search-icon' />
 
-                <input
-                    className='bg-transparent border-none h-full text-lg w-full ml-2 focus:outline-none'
-                    placeholder='Search text...'
-                    value={input}
-                    onChange={(e) => handleChange(e.target.value)}
-                />
+    return (
+        <div className="max-w-md mx-auto rounded-xl shadow-lg overflow-hidden md:max-w-2xl mb-2">
+            <div className="bg-gray-200 text-tindogPink">
+                <div className='input-wrapper'>
+                    <FaSearch id='search-icon' />
+                    <input
+                        className='input'
+                        placeholder='Search text...'
+                        value={input}
+                        onChange={(e) => handleChange(e.target.value)}
+                    />
+                </div>
             </div>
-            
+            <div className='results-list'>
+                {results.map((result, index) => (
+                    <div className='search-result' key={index}>
+                        <p>{result.text}</p>
+                    </div>
+                ))}
+            </div>
+
         </div>
+
     )
 }

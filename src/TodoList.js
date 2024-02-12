@@ -7,8 +7,7 @@ const TodoList = ({ tasks, markCompleted, deleteTask,setResults, results }) => {
         <div>
             <Header
                 tasks={tasks}
-                setResults = {setResults}
-                results = {results}
+                
 
             />
             <br />

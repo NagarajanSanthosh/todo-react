@@ -12,7 +12,6 @@ const Todo = () => {
     const [text, setText] = useState("");
     const [description, setDescription] = useState("");
     const [show, setShow] = useState(false);
-     const [results, setResults] = useState([])
 
     const handleInputChange = (event) => {
         setText(event.target.value);
@@ -60,8 +59,7 @@ const Todo = () => {
                     tasks={tasks}
                     markCompleted={markCompleted}
                     deleteTask={deleteTask}
-                    setResults = {setResults}
-                    results = {results}
+                    
                 />
                 <div className="row md-flex items-center">
                     <AddButton onClick={handleShowTrue} />

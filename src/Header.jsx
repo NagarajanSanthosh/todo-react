@@ -1,11 +1,10 @@
 import React from "react";
 import { SearchComponent } from "./Component/SearchComponent";
 
-const Header = ({ tasks, setResults, results }) => {
+const Header = ({ tasks}) => {
     return (<div>
         <SearchComponent
             tasks={tasks}
-            setResults={setResults} 
             />
             </div>
             
