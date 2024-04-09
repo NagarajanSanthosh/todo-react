@@ -29,7 +29,7 @@ const Todo = () => {
             completed: false,
         };
         try {
-            const response = await axios.post('http://localhost:5555/api/tasks', newTask, {
+             await axios.post('http://localhost:5555/api/tasks', newTask, {
                 headers: {
                     'Content-Type': 'application/json',
                 }
