@@ -13,6 +13,13 @@ const userS = new mongoose.Schema({
     email: String,
     password: String
 });
+const taskS = new mongoose.Schema({
+    id: Number,
+    text: String,
+    description: String,
+    completed: Boolean,
+})
+const taskModel = mongoose.model('tasks', taskS)
 const userModel = mongoose.model('userslist', userS);
 
 app.use(bodyParser.json());
@@ -38,5 +45,26 @@ app.post('/api/signup', async (req, res) => {
         res.status(500).send("Error creating user");
     }
 });
-
+app.post('/api/tasks', async (req, res) => {
+    const { id, text, description, completed } = req.body;
+    const data = {
+        id: id,
+        text: text,
+        description: description,
+        completed: completed,
+    }
+    try {
+        await taskModel.create(data);
+        res.status(201).send("Task uploaded");
+    }
+    catch (error) {
+        console.error('Error occurred', error);
+        res.status(500).send("Error creating task");
+    }
+})
+app.get('/api/tasks', (req, res) => {
+    taskModel.find()
+        .then(tasks => res.json(tasks))
+        .catch(err => res.json(err));
+})
 
